@@ -62,16 +62,17 @@ async def create_upload_file(
     # df.loc[0] = [filepath] 
     # Result = ModelLoading.finalImageOutput(df)
     gender = PredictionModel.predict_gender(filepath)
-    emotion = emotionDetection.predict_emotion(filepath)
+    # emotion = emotionDetection.predict_emotion(filepath)
     # age = ageDetection.predict_age()
     # res =  PredicNew.finalImageOutput()
     # Result = ModelLoading.finalImageOutput(contents)
-    age = deepFaceFW.predict_age(filepath)
+    # age = deepFaceFW.predict_age(filepath)
    
     # return age
     return {"Gender": gender, 
             "Age": "20", 
-            "Emotion": emotion['main_emotion']
+            "Emotion": "normal"
+            # emotion['main_emotion']
             }
     # return {"Gender": "Male", 
     #         "Age":"20", 
