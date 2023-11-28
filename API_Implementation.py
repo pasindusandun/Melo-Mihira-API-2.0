@@ -67,13 +67,13 @@ async def create_upload_file(file: UploadFile = File(...)):
     age = deepFaceFW.predict_age(filepath)
    
     # return age
-    # return {"Gender": gender, 
-    #         "Age": age[0]['age'], 
-    #         "Emotion": emotion['main_emotion']
-    #         }
-    return {"Gender": "Male", 
-            "Age":"20", 
-            "Emotion": "normal"
+    return {"Gender": gender, 
+            "Age": age[0]['age'], 
+            "Emotion": emotion['main_emotion']
             }
+    # return {"Gender": "Male", 
+    #         "Age":"20", 
+    #         "Emotion": "normal"
+    #         }
 
 
