@@ -59,21 +59,21 @@ async def create_upload_file(file: UploadFile = File(...)):
     # Add records to dataframe using the .loc function
     # df.loc[0] = [filepath] 
     # Result = ModelLoading.finalImageOutput(df)
-    gender = PredictionModel.predict_gender(filepath)
-    emotion = emotionDetection.predict_emotion(filepath)
+    # gender = PredictionModel.predict_gender(filepath)
+    # emotion = emotionDetection.predict_emotion(filepath)
     # age = ageDetection.predict_age()
     # res =  PredicNew.finalImageOutput()
     # Result = ModelLoading.finalImageOutput(contents)
-    age = deepFaceFW.predict_age(filepath)
+    # age = deepFaceFW.predict_age(filepath)
    
     # return age
-    return {"Gender": gender, 
-            "Age": age[0]['age'], 
-            "Emotion": emotion['main_emotion']
-            }
-    # return {"Gender": "Male", 
-    #         "Age":"20", 
-    #         "Emotion": "normal"
+    # return {"Gender": gender, 
+    #         "Age": age[0]['age'], 
+    #         "Emotion": emotion['main_emotion']
     #         }
+    return {"Gender": "Male", 
+            "Age":"20", 
+            "Emotion": "normal"
+            }
 
 
