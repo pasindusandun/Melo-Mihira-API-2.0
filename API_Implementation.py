@@ -44,9 +44,7 @@ def hello_world():
 
 
 @app.post("/demographicsImage")
-async def create_upload_file(
-    file: UploadFile = File(...)
-    ):
+async def create_upload_file(file: UploadFile = File(...)):
     file.filename = f"{uuid.uuid4()}.jpg"
     contents = await file.read()  
 
@@ -69,9 +67,13 @@ async def create_upload_file(
     age = deepFaceFW.predict_age(filepath)
    
     # return age
-    return {"Gender": gender, 
-            "Age": "20", 
-            "Emotion": emotion['main_emotion']
+    # return {"Gender": gender, 
+    #         "Age": age[0]['age'], 
+    #         "Emotion": emotion['main_emotion']
+    #         }
+    return {"Gender": "Male", 
+            "Age":"20", 
+            "Emotion": "normal"
             }
 
 
