@@ -70,9 +70,8 @@ async def create_upload_file(
    
     # return age
     return {"Gender": gender, 
-            "Age": age[0]['age'], 
+            "Age": "20", 
             "Emotion": emotion['main_emotion']
-            
             }
 
 
