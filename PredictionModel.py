@@ -24,7 +24,7 @@ def load_models():
 # emotion_model
 
 
-def get_image(img_path=None):
+def get_image(img_path):
     """Load the image for prediction."""
     # if img_path is None:
     #     cap = cv2.VideoCapture(0)
